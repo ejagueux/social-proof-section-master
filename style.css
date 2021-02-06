@@ -18,6 +18,7 @@ html {
 }
 
 body {
+    height: 100%;
     margin: 0 24px 0 24px;
     display: flex;
     background-image: url("./images/bg-pattern-top-desktop.svg"),
@@ -46,7 +47,8 @@ p {
 .intro h1 {
     color: var(--VeryDarkMagenta);
     margin-top: 0;
-    font-size: 38px;
+    margin-bottom: 10px;
+    font-size: 48px;
 }
 
 .intro p {
@@ -146,6 +148,12 @@ p {
 }
 
 /* RESPONSIVE */
+@media(max-width: 500px){
+     .large-2 {
+        margin: 0;
+    }
+}
+
 @media (max-width: 1439px) {
     .intro h1 {
         font-size: 28px;
@@ -191,9 +199,7 @@ p {
         justify-content: center;
     }
 
-    .large-2 {
-        margin: 0;
-    }
+   
 
     .large-1,
     .large-2,
@@ -208,16 +214,18 @@ p {
 
 @media (min-width: 1440px) {
     body {
+        flex-direction: row;
         justify-content: center;
-        display: grid;
-        place-items: center;
+        align-items: center;
     }
 
     main {
         width: 1110px;
     }
 
-
+    .intro p {
+        margin-top: 0;
+    }
     .intro {
         width: 450px;
     }
@@ -233,6 +241,7 @@ p {
     .mini-3 {
         align-items: center;
         flex-direction: row;
+        width: 445px;
     }
 
     .mini-2 {
